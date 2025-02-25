@@ -54,3 +54,19 @@ export const generateToken = (payload: object) => {
   console.log("Generated Token: ", token); // Log the token to ensure it's being generated
   return token;
 };
+export const GetUserType = (token: string): string | null => {
+  try {
+    const decoded = jwt.decode(token);
+
+    if (decoded && typeof decoded !== "string") {
+      const { userType } = decoded as JwtPayload & { userType?: string };
+
+      return userType || null; // Return userId as a string or null if not present
+    }
+
+    return null; // Return null if the token is invalid
+  } catch (err) {
+    console.error("Token decoding error:", err);
+    return null; // Return null if there's an error
+  }
+};
