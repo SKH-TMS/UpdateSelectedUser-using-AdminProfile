@@ -54,4 +54,4 @@ In v1 if User and Admin have same credentials and Login through eather Portel ie
 ## Solution in v2
 
 So to distinguish between user and admin i have defined the "GetUserType" function in "utils/token.ts". This function will help us distinguish between the user and admin token.
-note that this function is defined the Function in the "utils/token.ts" file and used it in the "src/app/api/auth/token/route.ts".
+note that this function is defined the "utils/token.ts" file and used it in the "src/app/api/auth/token/route.ts".
