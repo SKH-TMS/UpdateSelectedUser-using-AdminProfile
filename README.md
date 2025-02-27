@@ -15,6 +15,7 @@ Repositry Number: T21
 ### Version 0 (v0)
 
 - without models
+- not tested, **userType** should be in token.
 
 ### Version 1 (v1)
 
